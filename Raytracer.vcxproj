@@ -95,15 +95,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\walzi\Documents\Projets personnels\Raytracer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\walzi\Documents\Projets personnels\Raytracer\lib;$(LibraryPath)</LibraryPath>
-    <PublicIncludeDirectories>C:\Users\walzi\Documents\Projets personnels\Raytracer\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>$(SolutionDir)\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\walzi\Documents\Projets personnels\Raytracer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\walzi\Documents\Projets personnels\Raytracer\lib;$(LibraryPath)</LibraryPath>
-    <PublicIncludeDirectories>C:\Users\walzi\Documents\Projets personnels\Raytracer\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>$(SolutionDir)\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

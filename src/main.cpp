@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <thread>
 #include <omp.h>
+#include <chrono>
 
 #include "rtweekend.h"
 #include "color.h"
@@ -112,7 +113,7 @@ int main(){
     const auto aspect_ratio = 3.0/2.0; //we use a 16/9 ratio because it's common
     const int image_width     = 400;
     const int image_height    = static_cast<int>(image_width / aspect_ratio);
-    const int samples_per_pixel = 10;
+    const int samples_per_pixel = 1;
     const int max_depth = 50;
 
     // Window creation
@@ -142,6 +143,7 @@ int main(){
     // Render
 
     vector<color>buffer(image_width * image_height);
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
 #pragma omp parallel for num_threads(std::thread::hardware_concurrency()) schedule(dynamic)
     for (int j = 0; j < image_height; j++)
@@ -176,6 +178,10 @@ int main(){
            image.setPixel(i, j, c);
         }
     }
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+
+    std::cout << "(II) Exexution Time  = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << " ms" << std::endl;
+
     texture.loadFromImage(image);
     sprite.setTexture(texture);
 

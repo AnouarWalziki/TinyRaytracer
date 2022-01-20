@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\walzi\Documents\Projets personnels\Git_repos\TinyRaytracer\src\main.cpp(177,42): warning C4244: 'argument' : conversion de 'double' en 'sf::Uint8', perte possible de données
+C:\Users\walzi\Documents\Projets personnels\Git_repos\TinyRaytracer\src\main.cpp(177,39): warning C4244: 'argument' : conversion de 'double' en 'sf::Uint8', perte possible de données
+C:\Users\walzi\Documents\Projets personnels\Git_repos\TinyRaytracer\src\main.cpp(177,36): warning C4244: 'argument' : conversion de 'double' en 'sf::Uint8', perte possible de données
+  Raytracer.vcxproj -> C:\Users\walzi\Documents\Projets personnels\Git_repos\TinyRaytracer\x64\Debug\Raytracer.exe
